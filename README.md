@@ -4,9 +4,9 @@ This project is an Exploratory Data Analysis (EDA) of a Chronic Kidney Disease (
 
 ## Dataset
 
-The analysis uses the kidney_disease.csv file included in this repository.
+The analysis uses the `kidney_disease.csv` file included in this repository.
 
-Based on the file name, row/column pattern, and medical features, this dataset appears to match the original UCI Chronic Kidney Disease dataset:
+Based on the file name, row and column pattern, and medical features, this dataset appears to match the original UCI Chronic Kidney Disease dataset:
 [UCI Chronic Kidney Disease Dataset](https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease)
 
 The dataset includes medical and health-related features such as:
@@ -43,12 +43,11 @@ In the notebook, the dataset is first loaded and explored using:
 - overview of categorical and numerical columns
 
 Then several cleaning and preprocessing steps are done:
-- the id column is dropped
+- the `id` column is dropped
 - column names are renamed into simpler readable names
-- packed_cell_volume, white_blood_cell_count, and ed_blood_cell_count are converted to numeric
-- inconsistent string values are cleaned in columns like diabetes_mellitus, coronary_artery_disease, and class
-- the target class is mapped from ckd and 
-otckd to numeric values
+- `packed_cell_volume`, `white_blood_cell_count`, and `red_blood_cell_count` are converted to numeric
+- inconsistent string values are cleaned in columns like `diabetes_mellitus`, `coronary_artery_disease`, and `class`
+- the target `class` is mapped from `ckd` and `notckd` to numeric values
 - missing values are handled later using median for numeric columns and mode for categorical columns
 
 After that, the notebook explores patterns through different visualizations, including:
@@ -70,8 +69,8 @@ After that, the notebook explores patterns through different visualizations, inc
 - interactive Plotly scatterplots and 3D plots
 
 The notebook also starts machine learning preparation by separating features and target:
-- X = df.drop('class', axis=1)
-- y = df['class']
+- `X = df.drop('class', axis=1)`
+- `y = df['class']`
 
 ## Purpose
 
@@ -85,5 +84,5 @@ This project helps answer questions like:
 
 ## Files
 
-- 3. EDA cronic data analysis.ipynb : Jupyter notebook with the full EDA
-- kidney_disease.csv : dataset used in the analysis
+- `3. EDA cronic data analysis.ipynb` : Jupyter notebook with the full EDA
+- `kidney_disease.csv` : dataset used in the analysis
